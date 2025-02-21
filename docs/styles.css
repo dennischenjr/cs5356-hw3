@@ -1,0 +1,96 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.contact-info a {
+    color: white; 
+    text-decoration: none; /* this removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth the color transition */
+}
+
+.contact-info a:hover {
+    color: #FFD700; 
+}
+
+.hw3,.profile,.about, .projects, .coursework, .api-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Formatting profile section */
+.profile-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* Adds space between elements */
+    gap: 20px; 
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Makes sure image fits within the circle */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.profile-container img:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.profile-text {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        width: 95%; /* experiment w it -> adaptable for screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .profile, .about, .projects, .coursework, .api-content {
+        padding: 15px;
+    }
+}

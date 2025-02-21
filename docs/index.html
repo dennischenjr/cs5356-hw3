@@ -6,3 +6,119 @@
     <title>My Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+    <header>
+        <h1>Welcome to My Homepage</h1>
+        <p class="contact-info">
+            
+            <a href="mailto:dc2247@cornell.edu">dc2247@cornell.edu</a> • 
+            <a href="tel:+13476708496">347-670-8496</a> • 
+            <a href="https://www.linkedin.com/in/dennis-chen-jr" target="_blank">LinkedIn</a>
+        </p>
+    </header>
+    <main class="grid-container">
+        <section class="hw3">
+            <h2>Homework 3 Reflection</h2>
+            <p id="html">An html element we have not talked about is the
+                details element → Allows us to toggle visibility and create a widget that when I click, expands to reveal hidden content.
+                I used it with summary, so I can expand on more details of my projects below.
+            </p>
+            <p id="css">A CSS property we have not talked about is the
+                transition property → Allows us to create smooth animations between CSS property changes instead of applying them instantly.
+                I used it with transform and color, so my profile image smoothly enlarges when hovered over, and my contact links change color gradually for a more polished effect.
+            </p>
+        </section>
+        <section class="profile">
+            <div class="profile-container">
+                <img src="images/profile.jpg" alt="Profile Picture">
+                <div class="profile-text">
+                    <h2>Dennis Chen</h2>
+                    <p>Hi! I'm a current Master of Engineering in Operations Research and Information Engineering student at Cornell Tech, graduating in 2025. I graduated with a degree in Information Systems from Carnegie Mellon University in 2024. During my time at CMU, I concentrated in Data Analytics and obtained minors in Economics and Human-Computer Interaction.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I love operating at the intersection of technology, business, and data, using my interdisciplinary background to deliver value. 
+                With extensive experience working both independently and cross-functionally, I have managed the development of technical solutions, built user-centric products, and wrangled with complex datasets to drive decision making. 
+                Being able to wear many hats, I excel at bridging the gap between technical execution and business strategy to create meaningful, scalable solutions.</p>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Product Studio</h3>
+                <details>
+                    <summary>"Transitter": A collaborative project between Bloomberg and Cornell Tech to develop a one-stop shop application for NYC subway commuters.   
+                    </summary>
+                    <ul>
+                        <li>Led the development of a web app leveraging MTA data to predict crowd congestion for daily subway riders.</li>
+                        <li>Applied Agile methodologies to deliver iterative improvements, incorporating user research to refine transit navigation and reporting features.</li>
+                        <li>Designed and presented actionable insights to 10+ Bloomberg engineers, resulting in the identification of key features for future implementation.</li>
+                    </ul>
+                </details>
+            </article>
+            <article>
+                <h3>Lean Innovation Lab</h3>
+                <details>
+                    <summary>"Theia": A minimum viable product developed for DoD to ingest, store, and disseminate geo-spatial data for disaster response operations.     </summary>
+                    <ul>
+                        <li>Wrote Python scripts as part of an ETL pipeline to standardize, clean, and validate incoming geo-spatial data from multiple external sources, ensuring consistency and accuracy before ingestion.
+                        </li>
+                        <li>Managed development of a MongoDB database to ingest and disseminate geotagged data via RESTful APIs, supporting KML and GeoJSON formats.
+                        </li>
+                    </ul>
+                </details>
+            </article>
+            <article>
+                <h3>Machine Learning @ Carnegie Mellon</h3>
+                <details>
+                    <summary>"Bills": An initiative supporting the ACPA in identifying and prioritizing legislative bills that may infringe on civil liberties of vulnerable populations.
+                    </summary>
+                    <ul>
+                        <li>Queried and processed data using PostgreSQL for EDA, and built machine learning models in Python.
+
+                        </li>
+                        
+                </details>
+            </article>
+        </section>
+        <section class="coursework">
+            <h2>Coursework</h2>
+        
+            <div class="school">
+                <h3>Cornell Tech</h3>
+                <ul>
+                    <li>Applied Machine Learning</li>
+                    <li>Algorithms and Data Structures</li>
+                    <li>Building Startup Systems</li>
+                    <li>Causal Inference in Machine Learning</li>
+                    <li>Data Science</li>
+                    <li>Optimization Methods</li>
+                    
+                    
+                </ul>
+            </div>
+        
+            <div class="school">
+                <h3>Carnegie Mellon University</h3>
+                <ul>
+                    <li>Database Design & Development</li>
+                    <li>Application Design & Development</li>
+                    <li>Foundations of Software Engineering</li>
+                    <li>Software Design</li>
+                    <li>Machine Learning for Public Policy</li>
+                    <li>Practical Data Science</li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <section class="api-content">
+            <h2>api</h2>
+            <p id="quote">Fetching quote...</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Dennis Chen's Personal Homepage</p>
+    </footer>
