@@ -10,7 +10,6 @@
     <header>
         <h1>Welcome to My Homepage</h1>
         <p class="contact-info">
-            
             <a href="mailto:dc2247@cornell.edu">dc2247@cornell.edu</a> • 
             <a href="tel:+13476708496">347-670-8496</a> • 
             <a href="https://www.linkedin.com/in/dennis-chen-jr" target="_blank">LinkedIn</a>
@@ -77,15 +76,13 @@
                     </summary>
                     <ul>
                         <li>Queried and processed data using PostgreSQL for EDA, and built machine learning models in Python.
-
                         </li>
-                        
+                    </ul>
                 </details>
             </article>
         </section>
         <section class="coursework">
             <h2>Coursework</h2>
-        
             <div class="school">
                 <h3>Cornell Tech</h3>
                 <ul>
@@ -95,11 +92,8 @@
                     <li>Causal Inference in Machine Learning</li>
                     <li>Data Science</li>
                     <li>Optimization Methods</li>
-                    
-                    
                 </ul>
             </div>
-        
             <div class="school">
                 <h3>Carnegie Mellon University</h3>
                 <ul>
@@ -112,13 +106,46 @@
                 </ul>
             </div>
         </section>
-        
-        
         <section class="api-content">
-            <h2>api</h2>
-            <p id="quote">Fetching quote...</p>
+            <h2>Sunrise & Sunset Times Cornell Tech</h2>
+            <p id="sunrise">Sunrise: Fetching...</p>
+            <p id="sunset">Sunset: Fetching...</p>
         </section>
     </main>
     <footer>
         <p>&copy; Dennis Chen's Personal Homepage</p>
     </footer>
+    <script>
+        async function fetchSunriseSunset() {
+            const lat = 40.7550; // Latitude for Cornell Tech
+            const lng = -73.9543; // Longitude for Cornell Tech
+            const apiUrl = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lng}&timezone=UTC&date=today`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (data.results) {
+                    document.getElementById("sunrise").textContent = `Sunrise: ${convertToEasternTime(data.results.sunrise)}`;
+                    document.getElementById("sunset").textContent = `Sunset: ${convertToEasternTime(data.results.sunset)}`;
+                }
+            } catch (error) {
+                document.getElementById("sunrise").textContent = "Error fetching data";
+                document.getElementById("sunset").textContent = "Error fetching data";
+            }
+        }
+
+        function convertToEasternTime(utcTime) {
+            if (!utcTime) return "Invalid Time"; 
+
+            // Append a dummy date so parsing works
+            const utcDate = new Date(`2024-01-01 ${utcTime} UTC`);
+            
+            // Convert to Eastern Time
+            return utcDate.toLocaleTimeString("en-US", { timeZone: "America/New_York" });
+        }
+
+        fetchSunriseSunset();
+
+    </script>
+</body>
+</html>
