@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V84X85Z58"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6V84X85Z58');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- exploring meta tags -->
+    <meta property="og:title" content="Dennis Chen's Personal Homepage">
+    <meta property="og:description" content="Check out my projects, experience, and coursework.">
+    <meta property="og:image" content="https://sciencesprings.wordpress.com/wp-content/uploads/2017/09/cornell-tech-bloc.jpg?w=4000&h="> <!-- Replace with your image URL -->
+    <meta property="og:url" content="https://dennischenjr.github.io/cs5356-hw3/">
+    <meta property="og:type" content="website">
+
     <title>My Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -145,6 +161,21 @@
         }
 
         fetchSunriseSunset();
+
+
+        //Additional Interaction: Changing color based on mouseover
+        document.addEventListener("mousemove", (event) => {
+            const x = event.clientX / window.innerWidth;
+            const y = event.clientY / window.innerHeight;
+            
+            
+            const red = Math.floor(x * 255);
+            const green = Math.floor(y * 255);
+            const blue = Math.floor((1 - x) * 255);
+
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue}, 0.1)`;
+        });
+
 
     </script>
 </body>
